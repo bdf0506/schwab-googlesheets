@@ -9,7 +9,7 @@ Credits go to the following for laying the groundwork on the TD API to Google Sh
 
 To use:
 
-## Set up the TD Ameritrade API:
+## Set up the Schwab API:
 
 1. Sign up for a developer account from https://developer.schwab.com/register
 1. Create an app that uses the Trader API - Indidual, Account and Trading Production.
