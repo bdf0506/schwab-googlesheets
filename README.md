@@ -11,7 +11,7 @@ To use:
 
 ## Set up the TD Ameritrade API:
 
-1. Sign up for a developer account from [https://developer.tdameritrade.com/apis](https://developer.schwab.com/)
+1. Sign up for a developer account from https://developer.schwab.com/register
 1. Create an app that uses the Trader API - Indidual, Account and Trading Production.
 1. Set the callback URL to https://127.0.0.1 and save.
 1. You'll need to wait until the app changes to "Ready for Use" before things will work - this can take some time, maybe a week or more.
@@ -30,9 +30,10 @@ To use:
 
 ## Functions available:
 
-schwab_Positions
-schwab_Balance
-schwab_GetQuote
+* schwab_Positions
+* schwab_Balance
+* schwab_GetQuote
+
 Easiest way to simply test that it is working, is to enter "=schwab_Positions()" into a single cell and press enter. Your current positions should now be shown in the Google Sheet.
 
 ## Note:
