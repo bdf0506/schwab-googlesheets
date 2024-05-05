@@ -1,0 +1,40 @@
+<!-- Client Side html and js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <h1>Schwab Authentication</h1>
+    STEP 1: Launch the Schwab sign in process and obtain the response code.
+    <p>
+    <a href="<?=linkURL?>" target="blank">Click here to Login</a>
+    <p>
+    After logging in, an error page "This site can't be reached..." will be displayed. Copy the entire text (which contains the response code) 
+    in the address bar and paste it here.
+    <p>
+    Response text: <input id="txtReturnURI" type="text"/>
+    <p>
+    STEP 2: Use it to obtain a Bearer Token and Refresh Token from Schwab.
+    <p>
+    <input id="Button1" type="button" value="Step 2" onmouseup="btnEnter()" />&nbsp;
+    <input id="Button2" type="button" value="Cancel" onmouseup="btnClose()" />
+    
+    <script>
+      function btnEnter() {
+        var returnURI = document.getElementById("txtReturnURI").value;
+        var dict = {
+          returnURI: returnURI
+        }
+        
+        google.script.run.withSuccessHandler(btnClose)
+          .schwab_backfromPane(dict);
+      }
+      
+      window.btnClose = function() {
+        google.script.host.close();
+      };
+    </script>
+  </body>
+</html>
